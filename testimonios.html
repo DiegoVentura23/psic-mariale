@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="icon" type="image/jpg" href="https://static.readdy.ai/image/5aec7b76286c66d60d486936bbf3dfdb/3e4f7b6a48b24676704793db7737a5a5.jfif">
+<link rel="apple-touch-icon" href="https://static.readdy.ai/image/5aec7b76286c66d60d486936bbf3dfdb/3e4f7b6a48b24676704793db7737a5a5.jfif">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#d16969">
+<title>Testimonios y Galería - Marialejandra Delgado Navarro</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#d16969',secondary:'#f8f8f8'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Open Sans', sans-serif;
+color: #333;
+-webkit-tap-highlight-color: transparent;
+}
+.playfair { font-family: 'Playfair Display', serif; }
+.hero-bg {
+background: linear-gradient(135deg, #FFF0F5 0%, #F5F5DC 100%);
+position: relative;
+}
+.hero-overlay {
+background: linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.6) 100%);
+}
+.testimonial-card {
+background: rgba(255, 255, 255, 0.95);
+backdrop-filter: blur(10px);
+border: 1px solid rgba(209, 105, 105, 0.1);
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+transition: all 0.3s ease;
+}
+.testimonial-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 8px 25px rgba(209, 105, 105, 0.15);
+}
+.gallery-item {
+transition: all 0.3s ease;
+overflow: hidden;
+}
+.gallery-item:hover {
+transform: scale(1.05);
+}
+.glass-effect {
+background: rgba(255, 255, 255, 0.95);
+backdrop-filter: blur(10px);
+border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.quote-icon {
+font-size: 2rem;
+color: #d16969;
+opacity: 0.3;
+}
+.star-rating {
+color: #DAA520;
+}
+.lightbox {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.9);
+z-index: 1000;
+display: none;
+align-items: center;
+justify-content: center;
+}
+.lightbox img {
+max-width: 90%;
+max-height: 90%;
+object-fit: contain;
+}
+.testimonial-slider {
+scroll-behavior: smooth;
+scrollbar-width: none;
+-ms-overflow-style: none;
+}
+.testimonial-slider::-webkit-scrollbar {
+display: none;
+}
+@media (max-width: 768px) {
+.hero-title { font-size: 2rem !important; }
+.hero-subtitle { font-size: 1.125rem !important; }
+.testimonial-grid { grid-template-columns: 1fr !important; }
+.gallery-grid { grid-template-columns: 1fr !important; }
+}
+</style>
+</head>
+<body class="bg-white">
+<!-- Header -->
+<header class="w-full bg-gradient-to-r from-primary/90 to-primary relative shadow-lg">
+<div class="container mx-auto px-4 py-3 md:py-5 flex items-center justify-between">
+<div class="flex items-center">
+<img src="https://static.readdy.ai/image/5aec7b76286c66d60d486936bbf3dfdb/0ebf941435ff617ebcc4ce7260f07f19.jfif" alt="Logo" class="h-12 md:h-16">
+<div class="ml-3 md:ml-6">
+<h1 class="text-lg md:text-2xl font-bold text-white playfair">
+<span class="block md:hidden">Testimonios y Galería</span>
+<span class="hidden md:block">Testimonios y Galería</span>
+</h1>
+<p class="hidden md:block text-sm text-white/90">Historias reales que inspiran transformación</p>
+</div>
+</div>
+<nav class="hidden md:flex items-center space-x-6">
+<a href="https://readdy.ai/home/6522e443-0a3f-40fe-8660-d2d4a26a8097/6fb7ac82-9251-4836-be53-fade1f15e7f8" data-readdy="true" class="text-white hover:text-white/80 transition-colors text-base font-medium">Página Principal</a>
+<a href="#testimonios" class="text-white hover:text-white/80 transition-colors text-base font-medium">Testimonios</a>
+<a href="#galeria" class="text-white hover:text-white/80 transition-colors text-base font-medium">Galería</a>
+</nav>
+<div class="flex items-center space-x-4">
+<a href="https://instagram.com/psic.marialedn" target="_blank" class="w-8 h-8 flex items-center justify-center text-white hover:text-white/80 transition-colors">
+<i class="ri-instagram-line ri-lg"></i>
+</a>
+<a href="https://wa.me/50765507543" target="_blank" class="w-8 h-8 flex items-center justify-center text-white hover:text-white/80 transition-colors">
+<i class="ri-whatsapp-line ri-lg"></i>
+</a>
+<button class="md:hidden w-8 h-8 flex items-center justify-center text-white" id="mobile-menu-button">
+<i class="ri-menu-line ri-lg"></i>
+</button>
+</div>
+</div>
+<!-- Mobile Menu -->
+<div class="md:hidden hidden bg-white w-full absolute top-full left-0 shadow-md z-50" id="mobile-menu">
+<nav class="flex flex-col divide-y divide-gray-100">
+<a href="https://readdy.ai/home/6522e443-0a3f-40fe-8660-d2d4a26a8097/6fb7ac82-9251-4836-be53-fade1f15e7f8" data-readdy="true" class="text-gray-700 hover:text-primary transition-colors px-6 py-4 text-base font-medium">Inicio</a>
+<a href="#testimonios" class="text-gray-700 hover:text-primary transition-colors px-6 py-4 text-base font-medium">Testimonios</a>
+<a href="#galeria" class="text-gray-700 hover:text-primary transition-colors px-6 py-4 text-base font-medium">Galería</a>
+</nav>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="hero-bg min-h-screen flex items-center relative overflow-hidden">
+<div class="absolute inset-0" style="background-image: url('https://static.readdy.ai/image/5aec7b76286c66d60d486936bbf3dfdb/0d5d5ab8c8666e14fd602abdc2c28951.jfif'); background-size: cover; background-position: center 20%; background-repeat: no-repeat;"></div>
+<div class="hero-overlay absolute inset-0" style="background: linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 50%, rgba(255, 255, 255, 0.7) 100%);"></div>
+<div class="container mx-auto px-4 relative z-10">
+<div class="max-w-4xl mx-auto text-center mt-[-15vh]">
+<h1 class="hero-title text-4xl md:text-6xl font-bold text-gray-800 mb-6 playfair">Historias reales que inspiran transformación</h1>
+<p class="hero-subtitle text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto">Descubre las experiencias de quienes han encontrado su camino hacia el bienestar emocional y conoce los espacios donde hacemos posible esta transformación.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<a href="#testimonios" class="inline-flex items-center bg-primary text-white px-8 py-4 rounded-button font-medium hover:bg-opacity-90 transition-all whitespace-nowrap">
+<i class="ri-heart-line mr-2"></i>
+Ver Testimonios
+</a>
+<a href="#galeria" class="inline-flex items-center bg-white border border-primary text-primary px-8 py-4 rounded-button font-medium hover:bg-primary hover:text-white transition-all whitespace-nowrap">
+<i class="ri-gallery-line mr-2"></i>
+Explorar Galería
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonios Section -->
+<section id="testimonios" class="py-20 bg-gradient-to-b from-white to-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4 playfair">Testimonios de Transformación</h2>
+<div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
+<p class="text-lg text-gray-600 max-w-2xl mx-auto">Las palabras de quienes han vivido un proceso de crecimiento personal y han encontrado herramientas para su bienestar emocional.</p>
+</div>
+<!-- Testimonials Slider -->
+<div class="relative">
+<div class="testimonial-slider flex gap-6 overflow-x-auto pb-4" id="testimonial-slider">
+<!-- Testimonio 1 -->
+<div class="testimonial-card min-w-80 md:min-w-96 p-8 rounded-lg">
+<div class="flex items-center mb-6">
+<img src="https://readdy.ai/api/search-image?query=abstract%20profile%20silhouette%20icon%2C%20professional%20avatar%20placeholder%2C%20soft%20gradient%20background%20in%20light%20blue%20and%20gray%20tones%2C%20minimalist%20design&width=100&height=100&seq=anon1&orientation=squarish" alt="Paciente" class="w-16 h-16 rounded-full object-cover border-2 border-primary/20">
+<div class="ml-4">
+<h4 class="font-semibold text-gray-800">Paciente</h4>
+<p class="text-sm text-gray-500">Profesional</p>
+<div class="flex star-rating mt-1">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+</div>
+<div class="quote-icon mb-4">"</div>
+<p class="text-gray-600 leading-relaxed mb-4">"Llegué a terapia en un momento muy difícil de mi vida, sintiéndome perdida y abrumada por el estrés laboral. La Dra. Marialejandra me ayudó a encontrar herramientas prácticas para manejar la ansiedad y recuperar mi confianza. Su enfoque empático y profesional me permitió crecer emocionalmente de una manera que nunca pensé posible."</p>
+<p class="text-xs text-gray-400">Marzo 2024</p>
+</div>
+<!-- Testimonio 2 -->
+<div class="testimonial-card min-w-80 md:min-w-96 p-8 rounded-lg">
+<div class="flex items-center mb-6">
+<img src="https://readdy.ai/api/search-image?query=abstract%20profile%20silhouette%20icon%2C%20professional%20avatar%20placeholder%2C%20soft%20gradient%20background%20in%20green%20and%20gray%20tones%2C%20minimalist%20design&width=100&height=100&seq=anon2&orientation=squarish" alt="Paciente" class="w-16 h-16 rounded-full object-cover border-2 border-primary/20">
+<div class="ml-4">
+<h4 class="font-semibold text-gray-800">Paciente</h4>
+<p class="text-sm text-gray-500">Profesional</p>
+<div class="flex star-rating mt-1">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+</div>
+<div class="quote-icon mb-4">"</div>
+<p class="text-gray-600 leading-relaxed mb-4">"Como pareja, estábamos pasando por una crisis que parecía no tener solución. Las sesiones de orientación psicológica nos ayudaron a comunicarnos de manera más efectiva y a reconstruir la confianza. Ahora tenemos una relación más sólida y feliz. Estamos profundamente agradecidos por el acompañamiento profesional."</p>
+<p class="text-xs text-gray-400">Enero 2024</p>
+</div>
+<!-- Testimonio 3 -->
+<div class="testimonial-card min-w-80 md:min-w-96 p-8 rounded-lg">
+<div class="flex items-center mb-6">
+<img src="https://readdy.ai/api/search-image?query=abstract%20profile%20silhouette%20icon%2C%20professional%20avatar%20placeholder%2C%20soft%20gradient%20background%20in%20purple%20and%20gray%20tones%2C%20minimalist%20design&width=100&height=100&seq=anon3&orientation=squarish" alt="Paciente" class="w-16 h-16 rounded-full object-cover border-2 border-primary/20">
+<div class="ml-4">
+<h4 class="font-semibold text-gray-800">Paciente</h4>
+<p class="text-sm text-gray-500">Estudiante</p>
+<div class="flex star-rating mt-1">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+</div>
+<div class="quote-icon mb-4">"</div>
+<p class="text-gray-600 leading-relaxed mb-4">"Estaba en mi último año de universidad y no sabía qué camino tomar profesionalmente. La orientación vocacional me ayudó a descubrir mis verdaderas pasiones y habilidades. Ahora tengo claridad sobre mi futuro y me siento emocionada por las oportunidades que vienen. Fue una experiencia transformadora."</p>
+<p class="text-xs text-gray-400">Febrero 2024</p>
+</div>
+<!-- Testimonio 4 -->
+<div class="testimonial-card min-w-80 md:min-w-96 p-8 rounded-lg">
+<div class="flex items-center mb-6">
+<img src="https://readdy.ai/api/search-image?query=abstract%20profile%20silhouette%20icon%2C%20professional%20avatar%20placeholder%2C%20soft%20gradient%20background%20in%20pink%20and%20gray%20tones%2C%20minimalist%20design&width=100&height=100&seq=anon4&orientation=squarish" alt="Paciente" class="w-16 h-16 rounded-full object-cover border-2 border-primary/20">
+<div class="ml-4">
+<h4 class="font-semibold text-gray-800">Paciente</h4>
+<p class="text-sm text-gray-500">Profesional</p>
+<div class="flex star-rating mt-1">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+</div>
+<div class="quote-icon mb-4">"</div>
+<p class="text-gray-600 leading-relaxed mb-4">"Después de una pérdida familiar muy dolorosa, pensé que nunca podría superarlo. El proceso terapéutico me enseñó que el duelo es un camino que se puede transitar con apoyo profesional. Aprendí a honrar mi dolor mientras reconstruía mi vida. Hoy puedo decir que he encontrado paz y propósito nuevamente."</p>
+<p class="text-xs text-gray-400">Diciembre 2023</p>
+</div>
+<!-- Testimonio 5 -->
+<div class="testimonial-card min-w-80 md:min-w-96 p-8 rounded-lg">
+<div class="flex items-center mb-6">
+<img src="https://readdy.ai/api/search-image?query=abstract%20profile%20silhouette%20icon%2C%20professional%20avatar%20placeholder%2C%20soft%20gradient%20background%20in%20orange%20and%20gray%20tones%2C%20minimalist%20design&width=100&height=100&seq=anon5&orientation=squarish" alt="Paciente" class="w-16 h-16 rounded-full object-cover border-2 border-primary/20">
+<div class="ml-4">
+<h4 class="font-semibold text-gray-800">Paciente</h4>
+<p class="text-sm text-gray-500">Emprendedor</p>
+<div class="flex star-rating mt-1">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+</div>
+<div class="quote-icon mb-4">"</div>
+<p class="text-gray-600 leading-relaxed mb-4">"Los ataques de pánico estaban afectando mi vida personal y profesional de manera severa. A través de las técnicas cognitivo-conductuales, aprendí a identificar y manejar los desencadenantes de mi ansiedad. El cambio ha sido notable y sostenido. Ahora tengo las herramientas para enfrentar cualquier situación con confianza."</p>
+<p class="text-xs text-gray-400">Abril 2024</p>
+</div>
+<!-- Testimonio 6 -->
+<div class="testimonial-card min-w-80 md:min-w-96 p-8 rounded-lg">
+<div class="flex items-center mb-6">
+<img src="https://readdy.ai/api/search-image?query=abstract%20profile%20silhouette%20icon%2C%20professional%20avatar%20placeholder%2C%20soft%20gradient%20background%20in%20teal%20and%20gray%20tones%2C%20minimalist%20design&width=100&height=100&seq=anon6&orientation=squarish" alt="Paciente" class="w-16 h-16 rounded-full object-cover border-2 border-primary/20">
+<div class="ml-4">
+<h4 class="font-semibold text-gray-800">Paciente</h4>
+<p class="text-sm text-gray-500">Docente</p>
+<div class="flex star-rating mt-1">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+</div>
+<div class="quote-icon mb-4">"</div>
+<p class="text-gray-600 leading-relaxed mb-4">"Como madre de un niño con TDAH, me sentía abrumada y sin recursos para ayudarlo. Las sesiones me proporcionaron estrategias prácticas y me ayudaron a entender mejor las necesidades de mi hijo. Ahora nuestra relación es más armoniosa y él está progresando maravillosamente en la escuela."</p>
+<p class="text-xs text-gray-400">Mayo 2024</p>
+</div>
+</div>
+<!-- Navigation Buttons -->
+<div class="flex justify-center mt-8 space-x-4">
+<button class="w-12 h-12 flex items-center justify-center bg-white border border-primary text-primary rounded-full hover:bg-primary hover:text-white transition-all" id="prev-btn">
+<i class="ri-arrow-left-line"></i>
+</button>
+<button class="w-12 h-12 flex items-center justify-center bg-white border border-primary text-primary rounded-full hover:bg-primary hover:text-white transition-all" id="next-btn">
+<i class="ri-arrow-right-line"></i>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Galería Section -->
+<section id="galeria" class="py-20 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4 playfair">Galería de Momentos</h2>
+<div class="w-24 h-1 bg-primary mx-auto mb-6"></div>
+<p class="text-lg text-gray-600 max-w-2xl mx-auto">Conoce los espacios donde trabajamos juntos hacia tu bienestar y algunos momentos especiales de nuestras actividades.</p>
+</div>
+<!-- Gallery Categories -->
+<div class="flex flex-wrap justify-center gap-4 mb-12">
+<button class="gallery-filter px-6 py-3 bg-primary text-white rounded-button font-medium transition-all active" data-filter="all">Todas</button>
+<button class="gallery-filter px-6 py-3 bg-white border border-primary text-primary rounded-button font-medium hover:bg-primary hover:text-white transition-all" data-filter="consultorio">Consultorio</button>
+<button class="gallery-filter px-6 py-3 bg-white border border-primary text-primary rounded-button font-medium hover:bg-primary hover:text-white transition-all" data-filter="talleres">Talleres</button>
+<button class="gallery-filter px-6 py-3 bg-white border border-primary text-primary rounded-button font-medium hover:bg-primary hover:text-white transition-all" data-filter="certificaciones">Certificaciones</button>
+</div>
+<!-- Gallery Grid -->
+<div class="gallery-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Certificaciones Images -->
+<div class="gallery-item certificaciones rounded-lg overflow-hidden shadow-md cursor-pointer transform transition-all duration-300 hover:scale-[1.02]" data-category="certificaciones">
+<div class="relative overflow-hidden">
+<img src="https://static.readdy.ai/image/5aec7b76286c66d60d486936bbf3dfdb/d418d3c5a307b767a46587384c07c041.jfif" alt="Graduación de Maestría en Psicología Clínica" class="w-full h-72 md:h-80 object-cover transition-transform duration-700 hover:scale-105" style="object-position: center 20%;">
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+</div>
+<div class="p-6 bg-white">
+<h4 class="font-semibold text-gray-800 mb-3 text-lg">Graduación de Maestría en Psicología Clínica</h4>
+<p class="text-gray-600">Una etapa culminada con compromiso, esfuerzo y amor por la salud mental</p>
+</div>
+</div>
+<div class="gallery-item certificaciones rounded-lg overflow-hidden shadow-md cursor-pointer transform transition-all duration-300 hover:scale-[1.02]" data-category="certificaciones">
+<div class="relative overflow-hidden">
+<img src="https://static.readdy.ai/image/5aec7b76286c66d60d486936bbf3dfdb/ea56e6c2cb8c4150fa76c9adca866f03.jfif" alt="Idoneidad Profesional en Psicología Clínica" class="w-full h-72 md:h-80 object-cover transition-transform duration-700 hover:scale-105" style="object-position: center center;">
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+</div>
+<div class="p-6 bg-white">
+<h4 class="font-semibold text-gray-800 mb-3 text-lg">Idoneidad Profesional en Psicología Clínica</h4>
+<p class="text-gray-600"><span class="font-semibold">Certificado oficial de idoneidad profesional otorgado por el Colegio Técnico de Psicología de la República de Panamá.</span> Certificación que avala mi preparación y autorización legal para ejercer la psicología clínica en el país.</p>
+</div>
+</div>
+<div class="gallery-item talleres rounded-lg overflow-hidden shadow-md cursor-pointer transform transition-all duration-300 hover:scale-[1.02]" data-category="talleres">
+<div class="relative overflow-hidden">
+<img src="https://static.readdy.ai/image/5aec7b76286c66d60d486936bbf3dfdb/5e770896c21899dad2ec67ce74ef7be4.jfif" alt="Participación en congresos" class="w-full h-72 md:h-80 object-cover transition-transform duration-700 hover:scale-105" style="object-position: center center;">
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+</div>
+<div class="p-6 bg-white">
+<h4 class="font-semibold text-gray-800 mb-3 text-lg">Participación en congresos</h4>
+<p class="text-gray-600">Participamos activamente en congresos, seminarios y talleres científicos de psicología en Panamá, reafirmando nuestro compromiso con la formación continua y el aprendizaje de nuevas herramientas terapéuticas. Siempre actualizándonos para brindar lo mejor a cada paciente.</p>
+</div>
+</div>
+<div class="gallery-item consultorio rounded-lg overflow-hidden shadow-md cursor-pointer transform transition-all duration-300 hover:scale-[1.02]" data-category="consultorio">
+<div class="relative overflow-hidden">
+<img src="https://static.readdy.ai/image/5aec7b76286c66d60d486936bbf3dfdb/3ea1102b6e2eb0ab3cd2720f9734b566.jfif" alt="Bienvenida Psicóloga" class="w-full h-72 md:h-80 object-cover transition-transform duration-700 hover:scale-105" style="object-position: center center;">
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+</div>
+<div class="p-6 bg-white">
+<h4 class="font-semibold text-gray-800 mb-3 text-lg">Seminario a colaboradores de distintas empresas en Panamá</h4>
+<p class="text-gray-600">Entrenamiento e Inducción a personal de Línea 3 del Metro de Panamá</p>
+</div>
+</div>
+<div class="gallery-item talleres rounded-lg overflow-hidden shadow-md cursor-pointer transform transition-all duration-300 hover:scale-[1.02]" data-category="talleres">
+<div class="relative overflow-hidden">
+<img src="https://static.readdy.ai/image/5aec7b76286c66d60d486936bbf3dfdb/65a57698c44389a29ff5df25208f2e99.jfif" alt="Taller grupal de manejo de ansiedad" class="w-full h-72 md:h-80 object-cover transition-transform duration-700 hover:scale-105" style="object-position: center 40%;">
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+</div>
+<div class="p-6 bg-white">
+<h4 class="font-semibold text-gray-800 mb-3 text-lg">Evaluaciones</h4>
+<p class="text-gray-600">Evaluación masiva de personalidad a colaboradores de la Línea 3 del Metro de Panamá</p>
+</div>
+</div>
+<div class="gallery-item talleres rounded-lg overflow-hidden shadow-md cursor-pointer transform transition-all duration-300 hover:scale-[1.02]" data-category="talleres">
+<div class="relative overflow-hidden">
+<img src="https://static.readdy.ai/image/5aec7b76286c66d60d486936bbf3dfdb/11aeb67d30a019e5c8f5ffd3e930e3ba.jfif" alt="Inducción a Médicos Internos - Hospital Santo Tomás" class="w-full h-72 md:h-80 object-cover transition-transform duration-700 hover:scale-105" style="object-position: center center;">
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+</div>
+<div class="p-6 bg-white">
+<h4 class="font-semibold text-gray-800 mb-3 text-lg">Inducción a Médicos Internos - Hospital Santo Tomás</h4>
+<p class="text-gray-600">Charla sobre la importancia de la salud mental y herramientas para el manejo integral de pacientes, fortaleciendo el compromiso del Hospital con el bienestar emocional.</p>
+</div>
+</div>
+<div class="gallery-item talleres rounded-lg overflow-hidden shadow-md cursor-pointer transform transition-all duration-300 hover:scale-[1.02]" data-category="talleres">
+<div class="relative overflow-hidden">
+<img src="https://static.readdy.ai/image/5aec7b76286c66d60d486936bbf3dfdb/cc1ab95887639eba4deef28bf243ec0f.jfif" alt="Capacitación ETESA - Salud Mental Laboral" class="w-full h-72 md:h-80 object-cover transition-transform duration-700 hover:scale-105" style="object-position: center center;">
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+</div>
+<div class="p-6 bg-white">
+<h4 class="font-semibold text-gray-800 mb-3 text-lg">Capacitación ETESA - Salud Mental Laboral</h4>
+<p class="text-gray-600">Taller sobre manejo del estrés y ansiedad para colaboradores, brindando herramientas prácticas para mantener un ambiente laboral saludable.</p>
+</div>
+</div>
+<div class="gallery-item talleres rounded-lg overflow-hidden shadow-md cursor-pointer transform transition-all duration-300 hover:scale-[1.02]" data-category="talleres">
+<div class="relative overflow-hidden">
+<img src="https://static.readdy.ai/image/5aec7b76286c66d60d486936bbf3dfdb/fba194c53654f38a35f2e995d3091106.jfif" alt="Voluntariado Fundación Relaciones Sanas" class="w-full h-72 md:h-80 object-cover transition-transform duration-700 hover:scale-105" style="object-position: center center;">
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+</div>
+<div class="p-6 bg-white">
+<h4 class="font-semibold text-gray-800 mb-3 text-lg">Voluntariado Fundación Relaciones Sanas</h4>
+<p class="text-gray-600">Jóvenes psicólogos guiando actividades de bienestar emocional con familias panameñas, creando espacios de apoyo y crecimiento comunitario</p>
+</div>
+</div>
+<div class="gallery-item consultorio rounded-lg overflow-hidden shadow-md cursor-pointer transform transition-all duration-300 hover:scale-[1.02]" data-category="consultorio">
+<div class="relative overflow-hidden">
+<img src="https://static.readdy.ai/image/5aec7b76286c66d60d486936bbf3dfdb/850eb0486692ff9afe2187c413cc923e.png" alt="Consultorio de Atención Psicológica" class="w-full h-72 md:h-80 object-cover transition-transform duration-700 hover:scale-105" style="object-position: center center;">
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+</div>
+<div class="p-6 bg-white">
+<h4 class="font-semibold text-gray-800 mb-3 text-lg">Consultorio de Atención Psicológica</h4>
+<p class="text-gray-600">Espacio cálido y seguro diseñado para el desarrollo y bienestar emocional de niños, adolescentes y adultos.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-20 relative overflow-hidden">
+<div class="absolute inset-0" style="background-image: url('https://readdy.ai/api/search-image?query=blurred%20therapy%20office%20background%20with%20soft%20focus%2C%20warm%20lighting%2C%20peaceful%20atmosphere%2C%20comfortable%20furniture%2C%20plants%2C%20books%2C%20professional%20yet%20cozy%20setting&width=1920&height=600&seq=cta1&orientation=landscape'); background-size: cover; background-position: center; filter: blur(8px);"></div>
+<div class="absolute inset-0 bg-white bg-opacity-80"></div>
+<div class="container mx-auto px-4 relative z-10">
+<div class="max-w-3xl mx-auto text-center">
+<h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6 playfair">¿Listo para comenzar tu proceso de transformación?</h2>
+<p class="text-lg text-gray-600 mb-8">Cada historia de éxito comienza con el primer paso. Te acompaño en tu camino hacia el bienestar emocional con profesionalismo, empatía y confidencialidad.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<a href="https://wa.me/50765507543?text=Hola%20Psic.%20Marialejandra%20Delgado%20Navarro%2C%20he%20visto%20los%20testimonios%20y%20me%20gustaría%20agendar%20una%20cita.%20%C2%BFPodr%C3%ADa%20indicarme%20disponibilidad%3F" target="_blank" class="inline-flex items-center bg-primary text-white px-8 py-4 rounded-button font-medium hover:bg-opacity-90 transition-all text-lg group whitespace-nowrap">
+<i class="ri-calendar-line mr-2"></i>
+<span>Quiero agendar mi cita</span>
+<i class="ri-arrow-right-line ml-2 transition-transform group-hover:translate-x-1"></i>
+</a>
+<a href="https://instagram.com/psic.marialedn" target="_blank" class="inline-flex items-center bg-white border border-primary text-primary px-8 py-4 rounded-button font-medium hover:bg-primary hover:text-white transition-all text-lg whitespace-nowrap">
+<i class="ri-instagram-line mr-2"></i>
+Más información
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- WhatsApp Button -->
+<div class="fixed bottom-6 right-6 flex flex-col gap-4 z-50">
+<a href="https://readdy.ai/home/6522e443-0a3f-40fe-8660-d2d4a26a8097/6fb7ac82-9251-4836-be53-fade1f15e7f8" data-readdy="true" class="bg-primary text-white p-4 rounded-full shadow-lg hover:bg-primary/90 transition-colors flex items-center justify-center">
+<i class="ri-home-line ri-2x"></i>
+</a>
+<a href="https://wa.me/50765507543?text=Hola%20Psic.%20Marialejandra%20Delgado%20Navarro%2C%20he%20visto%20los%20testimonios%20y%20me%20gustaría%20agendar%20una%20cita.%20%C2%BFPodr%C3%ADa%20indicarme%20disponibilidad%3F" target="_blank" class="bg-[#25D366] text-white p-4 rounded-full shadow-lg hover:bg-[#128C7E] transition-colors flex items-center justify-center">
+<i class="ri-whatsapp-line ri-2x"></i>
+</a>
+</div>
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+<button class="absolute top-4 right-4 text-white text-2xl hover:text-gray-300 transition-colors z-10" id="close-lightbox">
+<i class="ri-close-line"></i>
+</button>
+<button class="absolute left-4 top-1/2 transform -translate-y-1/2 text-white text-2xl hover:text-gray-300 transition-colors z-10" id="prev-image">
+<i class="ri-arrow-left-line"></i>
+</button>
+<button class="absolute right-4 top-1/2 transform -translate-y-1/2 text-white text-2xl hover:text-gray-300 transition-colors z-10" id="next-image">
+<i class="ri-arrow-right-line"></i>
+</button>
+<img id="lightbox-image" src="" alt="" class="max-w-full max-h-full object-contain">
+<div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-center">
+<h4 id="lightbox-title" class="font-semibold mb-2"></h4>
+<p id="lightbox-description" class="text-sm opacity-80"></p>
+</div>
+</div>
+<script id="mobile-menu-script">
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenu = document.getElementById('mobile-menu');
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+mobileMenuButton.addEventListener('click', function() {
+mobileMenu.classList.toggle('hidden');
+const icon = mobileMenuButton.querySelector('i');
+if (mobileMenu.classList.contains('hidden')) {
+icon.classList.remove('ri-close-line');
+icon.classList.add('ri-menu-line');
+} else {
+icon.classList.remove('ri-menu-line');
+icon.classList.add('ri-close-line');
+}
+});
+const mobileLinks = mobileMenu.querySelectorAll('a');
+mobileLinks.forEach(link => {
+link.addEventListener('click', function() {
+mobileMenu.classList.add('hidden');
+const icon = mobileMenuButton.querySelector('i');
+icon.classList.remove('ri-close-line');
+icon.classList.add('ri-menu-line');
+});
+});
+});
+</script>
+<script id="testimonial-slider-script">
+document.addEventListener('DOMContentLoaded', function() {
+const slider = document.getElementById('testimonial-slider');
+const prevBtn = document.getElementById('prev-btn');
+const nextBtn = document.getElementById('next-btn');
+const cardWidth = 384 + 24;
+prevBtn.addEventListener('click', function() {
+slider.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+});
+nextBtn.addEventListener('click', function() {
+slider.scrollBy({ left: cardWidth, behavior: 'smooth' });
+});
+let autoScrollInterval = setInterval(function() {
+if (slider.scrollLeft >= slider.scrollWidth - slider.clientWidth) {
+slider.scrollTo({ left: 0, behavior: 'smooth' });
+} else {
+slider.scrollBy({ left: cardWidth, behavior: 'smooth' });
+}
+}, 5000);
+slider.addEventListener('mouseenter', function() {
+clearInterval(autoScrollInterval);
+});
+slider.addEventListener('mouseleave', function() {
+autoScrollInterval = setInterval(function() {
+if (slider.scrollLeft >= slider.scrollWidth - slider.clientWidth) {
+slider.scrollTo({ left: 0, behavior: 'smooth' });
+} else {
+slider.scrollBy({ left: cardWidth, behavior: 'smooth' });
+}
+}, 5000);
+});
+});
+</script>
+<script id="gallery-filter-script">
+document.addEventListener('DOMContentLoaded', function() {
+const filterButtons = document.querySelectorAll('.gallery-filter');
+const galleryItems = document.querySelectorAll('.gallery-item');
+filterButtons.forEach(button => {
+button.addEventListener('click', function() {
+const filter = this.getAttribute('data-filter');
+filterButtons.forEach(btn => {
+btn.classList.remove('active', 'bg-primary', 'text-white');
+btn.classList.add('bg-white', 'border-primary', 'text-primary');
+});
+this.classList.add('active', 'bg-primary', 'text-white');
+this.classList.remove('bg-white', 'border-primary', 'text-primary');
+galleryItems.forEach(item => {
+if (filter === 'all' || item.classList.contains(filter)) {
+item.style.display = 'block';
+setTimeout(() => {
+item.style.opacity = '1';
+item.style.transform = 'scale(1)';
+}, 50);
+} else {
+item.style.opacity = '0';
+item.style.transform = 'scale(0.8)';
+setTimeout(() => {
+item.style.display = 'none';
+}, 300);
+}
+});
+});
+});
+});
+</script>
+<script id="lightbox-script">
+document.addEventListener('DOMContentLoaded', function() {
+const lightbox = document.getElementById('lightbox');
+const lightboxImage = document.getElementById('lightbox-image');
+const lightboxTitle = document.getElementById('lightbox-title');
+const lightboxDescription = document.getElementById('lightbox-description');
+const closeLightbox = document.getElementById('close-lightbox');
+const prevImage = document.getElementById('prev-image');
+const nextImage = document.getElementById('next-image');
+const galleryItems = document.querySelectorAll('.gallery-item');
+let currentImageIndex = 0;
+let visibleImages = [];
+function updateVisibleImages() {
+visibleImages = Array.from(galleryItems).filter(item =>
+item.style.display !== 'none' && item.style.opacity !== '0'
+);
+}
+function openLightbox(index) {
+updateVisibleImages();
+currentImageIndex = index;
+const item = visibleImages[currentImageIndex];
+const img = item.querySelector('img');
+const title = item.querySelector('h4').textContent;
+const description = item.querySelector('p').textContent;
+lightboxImage.src = img.src;
+lightboxImage.alt = img.alt;
+lightboxTitle.textContent = title;
+lightboxDescription.textContent = description;
+lightbox.style.display = 'flex';
+document.body.style.overflow = 'hidden';
+}
+function closeLightboxHandler() {
+lightbox.style.display = 'none';
+document.body.style.overflow = '';
+}
+function showPrevImage() {
+updateVisibleImages();
+currentImageIndex = (currentImageIndex - 1 + visibleImages.length) % visibleImages.length;
+openLightbox(currentImageIndex);
+}
+function showNextImage() {
+updateVisibleImages();
+currentImageIndex = (currentImageIndex + 1) % visibleImages.length;
+openLightbox(currentImageIndex);
+}
+galleryItems.forEach((item, index) => {
+item.addEventListener('click', function() {
+updateVisibleImages();
+const visibleIndex = visibleImages.indexOf(item);
+if (visibleIndex !== -1) {
+openLightbox(visibleIndex);
+}
+});
+});
+closeLightbox.addEventListener('click', closeLightboxHandler);
+prevImage.addEventListener('click', showPrevImage);
+nextImage.addEventListener('click', showNextImage);
+lightbox.addEventListener('click', function(e) {
+if (e.target === lightbox) {
+closeLightboxHandler();
+}
+});
+document.addEventListener('keydown', function(e) {
+if (lightbox.style.display === 'flex') {
+if (e.key === 'Escape') {
+closeLightboxHandler();
+} else if (e.key === 'ArrowLeft') {
+showPrevImage();
+} else if (e.key === 'ArrowRight') {
+showNextImage();
+}
+}
+});
+});
+</script>
+<script id="smooth-scroll-script">
+document.addEventListener('DOMContentLoaded', function() {
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+if (targetId === '#') return;
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+const headerHeight = document.querySelector('header').offsetHeight;
+const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+window.scrollTo({
+top: targetPosition,
+behavior: 'smooth'
+});
+}
+});
+});
+});
+</script>
+</body>
+</html>
